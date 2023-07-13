@@ -1,0 +1,17 @@
+{
+	"name": "tr_ingent_hospital_admission_data",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2023-07-13T05:26:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
