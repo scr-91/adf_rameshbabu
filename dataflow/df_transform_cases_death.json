@@ -1,13 +1,74 @@
 {
-	"name": "dataflow1",
+	"name": "df_transform_cases_death",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
-			"sources": [],
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_raw_cases_and_deaths_df",
+						"type": "DatasetReference"
+					},
+					"name": "casesanddeaths"
+				}
+			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "filterEuropeonly"
+				},
+				{
+					"name": "selectOnlyRequiredfeilds"
+				},
+				{
+					"name": "pivottransformation"
+				},
+				{
+					"name": "lookup1"
+				}
+			],
 			"scriptLines": [
-				""
+				"source(output(",
+				"          country as string,",
+				"          country_code as string,",
+				"          continent as string,",
+				"          population as string,",
+				"          indicator as string,",
+				"          daily_count as integer,",
+				"          date as string,",
+				"          rate_14_day as string,",
+				"          source as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> casesanddeaths",
+				"casesanddeaths filter(continent == 'Europe' && not(isNull(country_code))) ~> filterEuropeonly",
+				"filterEuropeonly select(mapColumn(",
+				"          country,",
+				"          country_code,",
+				"          population,",
+				"          indicator,",
+				"          daily_count,",
+				"          source,",
+				"          each(match(name == 'date'),",
+				"               'reported' + 'date' = $$)",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> selectOnlyRequiredfeilds",
+				"selectOnlyRequiredfeilds pivot(groupBy(country,",
+				"          country_code,",
+				"          population,",
+				"          source,",
+				"          reporteddate,",
+				"          country_special = country+country_code),",
+				"     pivotBy(indicator),",
+				"     count = sum(daily_count),",
+				"     columnNaming: '$N$V',",
+				"     lateral: true) ~> pivottransformation",
+				"pivottransformation lookup(country == ERROR_FUNCTION(''),",
+				"     multiple: false,",
+				"     pickup: 'any',",
+				"     broadcast: 'auto')~> lookup1"
 			]
 		}
 	}
