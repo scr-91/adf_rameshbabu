@@ -3,10 +3,19 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "lksHttpServer",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"sourcebaseURL": {
+					"value": "@dataset().baseURL",
+					"type": "Expression"
+				}
+			}
 		},
 		"parameters": {
 			"relativURL": {
+				"type": "string"
+			},
+			"baseURL": {
 				"type": "string"
 			}
 		},
