@@ -21,7 +21,15 @@
 				"frequency": "Day",
 				"interval": 1,
 				"startTime": "2023-07-13T05:26:00",
-				"timeZone": "India Standard Time"
+				"timeZone": "India Standard Time",
+				"schedule": {
+					"minutes": [
+						3
+					],
+					"hours": [
+						11
+					]
+				}
 			}
 		}
 	}
