@@ -514,7 +514,14 @@
 						"interval": 1,
 						"startTime": "2023-07-13T05:26:00",
 						"timeZone": "India Standard Time",
-						"schedule": {}
+						"schedule": {
+							"minutes": [
+								3
+							],
+							"hours": [
+								11
+							]
+						}
 					}
 				}
 			},
