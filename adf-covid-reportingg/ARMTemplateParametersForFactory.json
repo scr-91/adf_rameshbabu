@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-covid-reportingg"
+		},
+		"lksAzureBlobStorage_connectionString": {
+			"value": ""
+		},
+		"lksAzureDataLakeStorage_accountKey": {
+			"value": ""
+		},
+		"lksAzureDataLakeStorage_properties_typeProperties_url": {
+			"value": "https://dlcovidreortingg.dfs.core.windows.net/"
+		},
+		"lksHttpServer_properties_typeProperties_url": {
+			"value": "https://github.com"
+		},
+		"tr_ingent_hospital_admission_data_properties_pl_ingest_ecdc_data_parameters_relativeURL": {
+			"value": "cloudboxacademy/covid19/raw/main/ecdc_data/hospital_admissions.csv"
+		},
+		"tr_ingent_hospital_admission_data_properties_pl_ingest_ecdc_data_parameters_sinkFilename": {
+			"value": "hospital_admission_json.csv"
+		}
+	}
+}
