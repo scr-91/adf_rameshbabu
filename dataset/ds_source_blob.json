@@ -1,0 +1,22 @@
+{
+	"name": "ds_source_blob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lksAzureBlobStorage",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"fileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "input"
+			}
+		}
+	}
+}
