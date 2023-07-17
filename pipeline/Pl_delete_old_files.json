@@ -50,7 +50,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Metadata To delete ').output.childItems",
+						"value": "@activity('Delete1').output.childItems",
 						"type": "Expression"
 					},
 					"isSequential": true,
