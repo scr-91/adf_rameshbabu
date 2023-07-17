@@ -24,6 +24,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
 						"modifiedDatetimeEnd": {
 							"value": "@adddays(utcnow(),+1)",
 							"type": "Expression"
@@ -40,7 +41,7 @@
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "Get Metadata To delete ",
+						"activity": "Get Metadata To delete",
 						"dependencyConditions": [
 							"Completed"
 						]
