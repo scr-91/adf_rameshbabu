@@ -31,7 +31,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"storedProcedureName": "[dbo].[splogs2]",
+					"storedProcedureName": "[dbo].[splogs3]",
 					"storedProcedureParameters": {
 						"adfname": {
 							"value": {
@@ -56,17 +56,10 @@
 						},
 						"triggername": {
 							"value": {
-								"value": "@pipeline().TriggerId",
+								"value": "@pipeline().TriggerName",
 								"type": "Expression"
 							},
 							"type": "String"
-						},
-						"triggertime": {
-							"value": {
-								"value": "@pipeline().TriggerTime",
-								"type": "Expression"
-							},
-							"type": "TimeSpan"
 						}
 					}
 				},
