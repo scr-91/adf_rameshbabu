@@ -1,0 +1,13 @@
+{
+	"name": "ds_SqlServer_onPrim_source_tables",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lksqlserver",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

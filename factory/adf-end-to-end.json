@@ -1,0 +1,9 @@
+{
+	"name": "adf-end-to-end",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9e0f1e28-d28d-4d39-ae20-f801cc3f9e09",
+		"tenantId": "46c97269-da66-4485-a43c-68c01b74bea0"
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"name": "ds_Parquet_sink_lake",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lks_dl_test",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "bronze"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

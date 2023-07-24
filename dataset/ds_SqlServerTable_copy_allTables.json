@@ -1,0 +1,13 @@
+{
+	"name": "ds_SqlServerTable_copy_allTables",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lksqlserver",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
