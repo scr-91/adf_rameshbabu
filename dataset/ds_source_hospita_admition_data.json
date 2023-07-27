@@ -1,10 +1,6 @@
 {
 	"name": "ds_source_hospita_admition_data",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "lksAzureDataLakeStorage",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

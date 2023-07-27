@@ -1,10 +1,6 @@
 {
 	"name": "ds_Parque_tables",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "lks_dl_test",
-			"type": "LinkedServiceReference"
-		},
 		"parameters": {
 			"schemaname": {
 				"type": "string"

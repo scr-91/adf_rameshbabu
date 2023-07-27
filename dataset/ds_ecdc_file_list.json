@@ -1,10 +1,6 @@
 {
 	"name": "ds_ecdc_file_list",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "lksAzureBlobStorage",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {

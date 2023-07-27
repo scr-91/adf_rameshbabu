@@ -1,10 +1,6 @@
 {
 	"name": "ds_population_raw_gz",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "lksAzureBlobStorage",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

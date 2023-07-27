@@ -1,10 +1,6 @@
 {
 	"name": "ds_ecdc_csv_dl",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "lksAzureDataLakeStorage",
-			"type": "LinkedServiceReference"
-		},
 		"parameters": {
 			"fileName": {
 				"type": "string"

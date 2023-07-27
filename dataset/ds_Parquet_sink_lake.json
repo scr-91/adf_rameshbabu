@@ -1,10 +1,6 @@
 {
 	"name": "ds_Parquet_sink_lake",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "lks_dl_test",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {

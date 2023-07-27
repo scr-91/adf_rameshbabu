@@ -1,10 +1,6 @@
 {
 	"name": "ds_population_raw_tsv",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "lksAzureDataLakeStorage",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

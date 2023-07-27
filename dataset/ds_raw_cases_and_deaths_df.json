@@ -1,10 +1,6 @@
 {
 	"name": "ds_raw_cases_and_deaths_df",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "lksAzureDataLakeStorage",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
